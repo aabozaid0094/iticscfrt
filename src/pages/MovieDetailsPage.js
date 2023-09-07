@@ -1,3 +1,4 @@
+import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Movie from '../components/Movie';
 import { useParams, useLocation } from 'react-router-dom';
@@ -9,7 +10,9 @@ function MovieDetailsPage() {
     return (
         <Container className="MovieDetailsPage">
             MovieDetailsPage{(id)?`, Id: ${id}`:``}
-            { movieData && <Movie {...movieData} is_single={true}></Movie>}
+            <Row className="justify-content-center">
+                { movieData && <Movie {...movieData} is_single={true}></Movie>}
+            </Row>
         </Container>
     );
 }

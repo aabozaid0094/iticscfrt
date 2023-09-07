@@ -22,7 +22,7 @@ const Movies = () => {
                 {
                     (!movies.length>0)
                         ? <Spinner className="my-3" animation="grow" variant="secondary" />
-                        : movies.map((m)=><Movie key={m.id} {...m}></Movie>)
+                        : movies.map((m)=><Movie key={m.id} {...m} is_single={false}></Movie>)
                 }
             </Row>
         </Container>
